@@ -1,0 +1,39 @@
+Registros originales: 10,280
+Registros con ingreso válido: 10,280
+Registros excluidos por ingreso faltante/no válido: 0
+Valores faltantes por columna después de filtrar ingreso:
+edad               0
+anios_esc          0
+nivel_edu          0
+sex                0
+ingreso_mensual    0
+dtype: int64
+
+=== COMPARACIÓN DE PARTICIONES ===
+Partición Fracción prueba  n_entrenamiento  n_prueba     R2      MAE     RMSE
+    80/20            0.20             8224      2056 0.2784 3,205.94 4,808.47
+    90/10            0.10             9252      1028 0.2588 3,210.01 4,660.10
+    70/30            0.30             7196      3084 0.2665 3,168.57 4,904.97
+
+=== SOLO EDAD VS. REGRESIÓN MÚLTIPLE (80/20) ===
+            Modelo     R2      MAE     RMSE
+         Solo edad 0.0015 3,881.45 5,656.31
+Regresión múltiple 0.2784 3,205.94 4,808.47
+
+Archivos guardados en: /mnt/data/repositorio_regresion_ingresos/resultados_regresion
+- comparacion_particiones.csv
+- comparacion_r2.png
+- metricas_modelos_80_20.csv
+- predicciones_test_80_20.csv
+- diagnostico_80_20.png
+
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 718, in _warm_feature_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/spreadsheet_warmup.py", line 509, in _warm_drawing_and_image_flows
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/generated/interface/models.py", line 32861, in bring_to_front
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/remote.py", line 764, in __call__
+  File "/tmp/tmp.QlpUkOUI9D/artifact_tool_v2-2.8.66/artifact_tool/rpc/client.py", line 175, in call
+artifact_tool.rpc.client.RemoteError: Element ordering requires an owning element collection.
